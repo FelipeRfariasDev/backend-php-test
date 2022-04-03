@@ -58,3 +58,4 @@ php artisan db:seed --class=ProductsSeeders
 
 https://www.getpostman.com/collections/4d00195022e3f9c1d9b7
 
+https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/postman/crud%20produtos.postman_collection.json
