@@ -86,13 +86,12 @@ class ProductsController extends Controller
 
     /**
      * Atualizar produto pelo id
+     * @param int $id
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,int $id)
     {
-        $id = $request->input('id');
-
         $products = Products::find($id);
 
         if(!$products) {
