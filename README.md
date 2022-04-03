@@ -53,3 +53,5 @@ O processo de Pull Request funciona da seguinte maneira:
 ## Dúvidas?
 
 Caso tenha alguma dúvida referente ao teste você pode abrir uma issue aqui mesmo neste repositório.
+
+php artisan db:seed --class=ProductsSeeders
