@@ -9,18 +9,31 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * Buscar produtos com paginação
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $buscar = $request->get('buscar');
+
+        $where = [
+            ['nome', 'like',"%{$buscar}%"]
+        ];
+
+        $orWhere = [
+            ['marca', 'like',"%{$buscar}%"]
+        ];
+
+        $products = Products::where($where)->orWhere($orWhere)->orderBy('id','desc')->paginate(3);
+        
+        return response()->json([
+            "products"      =>  $products
+        ]);
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
+     * Adicionar produto
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -51,36 +64,85 @@ class ProductsController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Products  $products
+     * Listar produto pelo id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Products $products)
+    public function show($id)
     {
-        //
+        $products = Products::find($id);
+
+        if(!$products) {
+            return response()->json([
+                "success"    =>  false,
+                "message"   => "id $id não foi encontrado",
+            ], 404);
+        }
+        return response()->json([
+            "success"  =>  true,
+            "products" => $products,
+        ]);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
+     * Atualizar produto pelo id
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request)
     {
-        //
+        $id = $request->input('id');
+
+        $products = Products::find($id);
+
+        if(!$products) {
+            return response()->json([
+                "success"    =>  false,
+                "message"   => "id $id não foi encontrado",
+            ], 404);
+        }
+
+        $products->codigo = $request->input("codigo");
+        $products->nome = $request->input("nome");
+        $products->preco = $request->input("preco");
+        $products->qty_disponivel = $request->input("qty_disponivel");
+        $products->marca = $request->input("marca");
+
+        try {
+            if($products->save()){
+                return response()->json([
+                    "success"    =>  true,
+                    "message"   =>  "Atualizado com sucesso",
+                    "products"      =>  $products
+                ]);
+            }
+        } catch (QueryException $e){
+            return response()->json([
+                "success"    =>  false,
+                "message"   =>  $e->getMessage()
+            ]);
+        }
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Products  $products
+     * Remover produto pelo id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Products $products)
+    public function destroy($id)
     {
-        //
+        $products = Products::find($id);
+        if(!$products) {
+            return response()->json([
+                "success"    =>  false,
+                "message"   => "id $id não foi encontrado",
+            ], 404);
+        }
+        if($products->delete()){
+            return response()->json([
+                "success"    =>  true,
+                "message" => "Product $id removido com sucesso"
+            ]);
+        }
     }
 }
