@@ -54,8 +54,24 @@ O processo de Pull Request funciona da seguinte maneira:
 
 Caso tenha alguma dúvida referente ao teste você pode abrir uma issue aqui mesmo neste repositório.
 
+
+C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 app-test-db
+127.0.0.1 app-test-api
+
+docker-compose up -d
+
+docker exec -it app-test-db bash
+
+docker exec -it app-test-api bash
+
+cd app
+
+php artisan migrate
+
 php artisan db:seed --class=ProductsSeeders
 
-https://www.getpostman.com/collections/4d00195022e3f9c1d9b7
+https://go.postman.co/workspace/Team-Workspace~ae3c3730-a225-4945-879f-78225a00b42d/collection/17591629-8086ef04-4afe-49a4-8de3-d1e904e7934d?action=share&creator=17591629
 
 https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/postman/crud%20produtos.postman_collection.json

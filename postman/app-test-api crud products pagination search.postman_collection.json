@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "8086ef04-4afe-49a4-8de3-d1e904e7934d",
-		"name": "crud produtos",
+		"name": "app-test-api crud products pagination search",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"codigo\":\"2\",\r\n    \"nome\":\"camiseta2\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
+					"raw": "{\r\n    \"codigo\":\"102\",\r\n    \"nome\":\"camiseta2\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,15 +20,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products",
+					"raw": "http://app-test-api/api/products",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"app-test-api"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"products"
@@ -44,7 +40,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":\"50\",\r\n    \"codigo\":\"5051\",\r\n    \"nome\":\"camiseta 50 alterada\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
+					"raw": "{\r\n    \"id\":\"2\",\r\n    \"codigo\":\"5051\",\r\n    \"nome\":\"camiseta 50 alterada\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -52,19 +48,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products/50",
+					"raw": "http://app-test-api/api/products/2",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"app-test-api"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"products",
-						"50"
+						"2"
 					]
 				}
 			},
@@ -88,15 +80,11 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products?buscar=camiseta",
+					"raw": "http://app-test-api/api/products?buscar=camiseta",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"app-test-api"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"products"
@@ -129,19 +117,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products/52",
+					"raw": "http://app-test-api/api/products/2",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"app-test-api"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"products",
-						"52"
+						"2"
 					]
 				}
 			},
@@ -162,19 +146,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products/52",
+					"raw": "http://app-test-api/api/products/2",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"app-test-api"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"products",
-						"52"
+						"2"
 					]
 				}
 			},
