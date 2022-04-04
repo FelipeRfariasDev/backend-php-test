@@ -54,6 +54,7 @@ O processo de Pull Request funciona da seguinte maneira:
 
 Caso tenha alguma dúvida referente ao teste você pode abrir uma issue aqui mesmo neste repositório.
 
+## Segue o passo a passo para executar o projeto
 
 C:\Windows\System32\drivers\etc\hosts
 
