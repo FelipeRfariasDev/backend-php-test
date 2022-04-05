@@ -8,7 +8,16 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+
     /**
+     * @OA\Get(
+     * path="/api/produtcs",
+     * summary="Listar produtos com buscar e paginação",
+     * description="Get Listar produtos com buscar e paginação",
+     * @OA\Response(
+     *    response=201,
+     *    description="Get Listar produtos com buscar e paginação"
+     * )
      * Buscar produtos com paginação
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -33,6 +42,14 @@ class ProductsController extends Controller
     }
 
     /**
+     * @OA\Post(
+     * path="/api/produtcs",
+     * summary="Add produtos",
+     * description="Post Add produtos",
+     * @OA\Response(
+     *    response=201,
+     *    description="Post Add produtos"
+     * )
      * Adicionar produto
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -64,6 +81,14 @@ class ProductsController extends Controller
     }
 
     /**
+     * @OA\Get(
+     * path="/api/produtcs/{id}",
+     * summary="Get produtos",
+     * description="Get produtos id",
+     * @OA\Response(
+     *    response=201,
+     *    description="Get produto"
+     * )
      * Listar produto pelo id
      * @param int $id
      * @return \Illuminate\Http\Response
@@ -85,6 +110,14 @@ class ProductsController extends Controller
     }
 
     /**
+     * @OA\Put(
+     * path="/api/produtcs/{id}",
+     * summary="Put produtos",
+     * description="Put produtos id",
+     * @OA\Response(
+     *    response=201,
+     *    description="Put produto"
+     * )
      * Atualizar produto pelo id
      * @param int $id
      * @param  \Illuminate\Http\Request  $request
@@ -124,6 +157,14 @@ class ProductsController extends Controller
     }
 
     /**
+     * @OA\Delete(
+     * path="/api/produtcs/{id}",
+     * summary="Delete produtos",
+     * description="Delete produtos id",
+     * @OA\Response(
+     *    response=201,
+     *    description="Delete produto"
+     * )
      * Remover produto pelo id
      * @param int $id
      * @return \Illuminate\Http\Response
