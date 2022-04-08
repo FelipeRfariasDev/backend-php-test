@@ -85,3 +85,7 @@ https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/postman/a
 
 
 vendor/bin/phpunit --testdox
+
+
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/products.png?raw=true)
+
