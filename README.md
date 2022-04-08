@@ -82,3 +82,6 @@ php artisan l5-swagger:generate
 https://go.postman.co/workspace/Team-Workspace~ae3c3730-a225-4945-879f-78225a00b42d/collection/17591629-8086ef04-4afe-49a4-8de3-d1e904e7934d?action=share&creator=17591629
 
 https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/postman/app-test-api%20crud%20products%20pagination%20search.postman_collection.json
+
+
+vendor/bin/phpunit --testdox
