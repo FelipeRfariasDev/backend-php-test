@@ -8,9 +8,22 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-
     /**
-     * Buscar produtos com paginação
+     * @OA\Get(
+     *     path="/api/products",
+     *     description="Get list products",
+     *     @OA\Parameter(
+     *          name="buscar",
+     *          in="query",
+     *          required=false,
+     *          description="Get list products like buscar",
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Response(response="default", description="Get list products")
+     * )
+     * Buscar produtos
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -27,13 +40,58 @@ class ProductsController extends Controller
         ];
 
         $products = Products::where($where)->orWhere($orWhere)->orderBy('id','desc')->paginate(3);
-        
+
         return response()->json([
             "products"      =>  $products
         ]);
     }
 
     /**
+     * @OA\Post(
+     *     path="/api/products",
+     *     description="Add products",
+     *     @OA\Parameter(
+     *          name="codigo",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="nome",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="preco",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="qty_disponivel",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="marca",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Response(response="default", description="Add products")
+     * )
      * Adicionar produto
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -65,8 +123,22 @@ class ProductsController extends Controller
     }
 
     /**
-     * Listar produto pelo id
-     * @param int $id
+     * @OA\Get(
+     *     path="/api/products/{id}",
+     *     description="Get list products igual id",
+     *     @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          description="Get list products igual id",
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Response(response="default", description="Get list products id")
+     * )
+     * Buscar produtos id
+     * @param $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)

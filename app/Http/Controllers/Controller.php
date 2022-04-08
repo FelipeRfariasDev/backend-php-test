@@ -9,8 +9,13 @@ use Illuminate\Routing\Controller as BaseController;
 
 /**
  * @OA\Server(url="http://app-test-api"),
- * @OA\Info(title="Laravel Road",version="0.0.1")
-*/
+ * @OA\Info(
+ *      version="0.0.1",
+ *      title="Darkaonline L5 Swagger RestFull Api",
+ *      description="Darkaonline L5 Swagger RestFull Api Products"
+ * )
+ *
+ */
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
