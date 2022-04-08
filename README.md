@@ -92,3 +92,5 @@ vendor/bin/phpunit --testdox
 
 ![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/products.png?raw=true)
 
+
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/swagger/img.png?raw=true)
