@@ -43,7 +43,7 @@ class ProductsController extends Controller
 
         return response()->json([
             "products"      =>  $products
-        ]);
+        ],200);
     }
 
     /**
@@ -118,7 +118,7 @@ class ProductsController extends Controller
             return response()->json([
                 "success"    =>  false,
                 "message"   =>  $e->getMessage()
-            ]);
+            ],404);
         }
     }
 
@@ -154,7 +154,7 @@ class ProductsController extends Controller
         return response()->json([
             "success"  =>  true,
             "products" => $products,
-        ]);
+        ], 201);
     }
 
     /**
@@ -241,13 +241,13 @@ class ProductsController extends Controller
                     "success"    =>  true,
                     "message"   =>  "Atualizado com sucesso",
                     "products"      =>  $products
-                ]);
+                ],201);
             }
         } catch (QueryException $e){
             return response()->json([
                 "success"    =>  false,
                 "message"   =>  $e->getMessage()
-            ]);
+            ],404);
         }
     }
 
@@ -283,7 +283,7 @@ class ProductsController extends Controller
             return response()->json([
                 "success"    =>  true,
                 "message" => "Product $id removido com sucesso"
-            ]);
+            ], 201);
         }
     }
 }
