@@ -138,10 +138,10 @@ class ProductsController extends Controller
      *     @OA\Response(response="default", description="Get list products id")
      * )
      * Buscar produtos id
-     * @param $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
         $products = Products::find($id);
 
@@ -158,6 +158,60 @@ class ProductsController extends Controller
     }
 
     /**
+     * @OA\Put(
+     *     path="/api/products/{id}",
+     *     description="Update products",
+     *     @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          description="Pul product igual id",
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="codigo",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="nome",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="preco",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="qty_disponivel",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Parameter(
+     *          name="marca",
+     *          in="query",
+     *          required=true,
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
+     *     ),
+     *     @OA\Response(response="default", description="Update product")
+     * )
      * Atualizar produto pelo id
      * @param int $id
      * @param  \Illuminate\Http\Request  $request
@@ -165,6 +219,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request,int $id)
     {
+
         $products = Products::find($id);
 
         if(!$products) {
@@ -197,11 +252,25 @@ class ProductsController extends Controller
     }
 
     /**
-     * Remover produto pelo id
+     * @OA\Delete(
+     *     path="/api/products/{id}",
+     *     description="Delete product igual id",
+     *     @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          description="Delete product igual id",
+     *          @OA\Schema(
+     *              type="integer"
+     *          ),
+     *     ),
+     *     @OA\Response(response="default", description="Delete product igual id")
+     * )
+     * Buscar produtos id
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
         $products = Products::find($id);
         if(!$products) {
