@@ -65,7 +65,7 @@ class ProductsControllerApiTest extends TestCase
     }
 
     /**
-     * Buscar produtos /api/products pagination via get nome like %camisetas% or marca like %camisetas%
+     * Buscar produtos /api/products pagination via get nome like %Produto1% or marca like %Produto1%
      *
      * @return void
      */
