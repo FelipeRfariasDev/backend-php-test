@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"codigo\":\"102\",\r\n    \"nome\":\"camiseta2\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
+					"raw": "{\r\n    \"codigo\":\"500\",\r\n    \"nome\":\"camiseta2\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":\"2\",\r\n    \"codigo\":\"5051\",\r\n    \"nome\":\"camiseta 50 alterada\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
+					"raw": "{\r\n    \"codigo\":\"510\",\r\n    \"nome\":\"alterad8\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"alterad8\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -48,7 +48,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://app-test-api/api/products/2",
+					"raw": "http://app-test-api/api/products/66",
 					"protocol": "http",
 					"host": [
 						"app-test-api"
@@ -56,7 +56,7 @@
 					"path": [
 						"api",
 						"products",
-						"2"
+						"66"
 					]
 				}
 			},
@@ -69,7 +69,13 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -117,7 +123,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://app-test-api/api/products/2",
+					"raw": "http://app-test-api/api/products/510",
 					"protocol": "http",
 					"host": [
 						"app-test-api"
@@ -125,7 +131,7 @@
 					"path": [
 						"api",
 						"products",
-						"2"
+						"510"
 					]
 				}
 			},

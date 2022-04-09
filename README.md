@@ -86,11 +86,14 @@ https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/postman/a
 
 vendor/bin/phpunit --testdox
 
-
-![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/ProductsControllerApiTest.png?raw=true)
-
-
 ![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/products.png?raw=true)
 
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/AddProduct1.png?raw=true)
+
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/UpdateProduct2.png?raw=true)
+
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/BuscarProdutos3.png?raw=true)
+
+![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/phpunit_img/DeleteProduct4.png?raw=true)
 
 ![alt text](https://github.com/feliperodriguesfariasphp/backend-php-test/blob/main/swagger/img.png?raw=true)
