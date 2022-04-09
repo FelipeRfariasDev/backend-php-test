@@ -56,9 +56,13 @@ Caso tenha alguma dúvida referente ao teste você pode abrir uma issue aqui mes
 
 ## Segue o passo a passo para executar o projeto
 
+[Iniciar Video](https://www.youtube.com/watch?v=Xnj1ETFm9i0)
+##### Autor > Felipe Rodrigues Farias
+
 C:\Windows\System32\drivers\etc\hosts
 
 127.0.0.1 app-test-db
+
 127.0.0.1 app-test-api
 
 docker-compose up -d
@@ -76,6 +80,8 @@ cp .env.example .env
 php artisan migrate
 
 php artisan db:seed --class=ProductsSeeders
+
+php artisan migrate:refresh
 
 php artisan l5-swagger:generate
 
