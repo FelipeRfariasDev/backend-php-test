@@ -45,7 +45,7 @@ A API deve implementar os seguintes verbos e endpoint:
 
 C:\Windows\System32\drivers\etc\hosts
 
-127.0.0.1 app-test-api.com
+127.0.0.1 app-test-api
 
 composer install
 
