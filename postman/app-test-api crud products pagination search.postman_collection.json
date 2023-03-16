@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "8086ef04-4afe-49a4-8de3-d1e904e7934d",
+		"name": "app-test-api crud products pagination search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\":\"500\",\r\n    \"nome\":\"camiseta2\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"marcaX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://app-test-api/api/products",
+					"protocol": "http",
+					"host": [
+						"app-test-api"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update produto pelo id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\":\"510\",\r\n    \"nome\":\"alterad8\",\r\n    \"preco\":150.22,\r\n    \"qty_disponivel\":110,\r\n    \"marca\":\"alterad8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://app-test-api/api/products/66",
+					"protocol": "http",
+					"host": [
+						"app-test-api"
+					],
+					"path": [
+						"api",
+						"products",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar produtos like nome ou marca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://app-test-api/api/products?buscar=camiseta",
+					"protocol": "http",
+					"host": [
+						"app-test-api"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "buscar",
+							"value": "camiseta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar produto pelo id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://app-test-api/api/products/510",
+					"protocol": "http",
+					"host": [
+						"app-test-api"
+					],
+					"path": [
+						"api",
+						"products",
+						"510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remover produto pelo id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://app-test-api/api/products/2",
+					"protocol": "http",
+					"host": [
+						"app-test-api"
+					],
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

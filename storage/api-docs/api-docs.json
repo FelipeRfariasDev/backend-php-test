@@ -1,0 +1,190 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Darkaonline L5 Swagger RestFull Api",
+        "description": "Darkaonline L5 Swagger RestFull Api Products",
+        "version": "0.0.1"
+    },
+    "servers": [
+        {
+            "url": "http://app-test-api"
+        }
+    ],
+    "paths": {
+        "/api/products": {
+            "get": {
+                "description": "Get list products",
+                "operationId": "6d8ae74dcafe19c4813904d4ea9e4c57",
+                "parameters": [
+                    {
+                        "name": "buscar",
+                        "in": "query",
+                        "description": "Get list products like buscar",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Get list products"
+                    }
+                }
+            },
+            "post": {
+                "description": "Add products",
+                "operationId": "9f0b814cd8d69075ed70d4cc79c9f417",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nome",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "preco",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "qty_disponivel",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "marca",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Add products"
+                    }
+                }
+            }
+        },
+        "/api/products/{id}": {
+            "get": {
+                "description": "Get list products igual id",
+                "operationId": "f6410f1810b0a90ba3d72d5b8250a27d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Get list products igual id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Get list products id"
+                    }
+                }
+            },
+            "put": {
+                "description": "Update products",
+                "operationId": "14b6ff17cc6ce7298a06271a8bc89539",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Pul product igual id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "codigo",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "nome",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "preco",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "qty_disponivel",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "marca",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Update product"
+                    }
+                }
+            },
+            "delete": {
+                "description": "Delete product igual id",
+                "operationId": "3dda9543e42196cc1ff7b18d2c9f9357",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Delete product igual id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Delete product igual id"
+                    }
+                }
+            }
+        }
+    }
+}

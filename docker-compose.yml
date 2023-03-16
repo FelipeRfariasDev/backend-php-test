@@ -1,0 +1,47 @@
+version: "3.7"
+
+services:
+
+  app-api:
+    container_name: app-test-api
+    tty: true
+    image: webdevops/php-nginx:8.0
+    environment:
+      - APP_NAME=Laravel Teste
+      - APP_URL=http://localhost
+      - DB_CONNECTION=mysql
+      - DB_HOST=app-db
+      - DB_PORT=3306
+      - DB_DATABASE=laravel-app-api
+      - DB_USERNAME=application
+      - DB_PASSWORD=application
+      - WEB_DOCUMENT_ROOT=/app/public
+      - APP_ENV=local
+      - APP_DEBUG=true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./:/app
+    restart: on-failure
+    networks:
+      - homologacao
+
+  app-db:
+    container_name: app-test-db
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=laravel-app-api
+      - MYSQL_USER=application
+      - MYSQL_PASSWORD=application
+    ports:
+      - 3306:3306
+    restart: on-failure
+    networks:
+      - homologacao
+
+networks:
+  homologacao:
+    name: homologacao
+    driver: bridge
