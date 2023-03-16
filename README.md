@@ -36,8 +36,7 @@ A API deve implementar os seguintes verbos e endpoint:
 
 ## Recomendações
 
-- Siga as [boas práticas](https://swagger.io/resources/articles/best-practices-in-api-design/) para o desenvolvimento de APIs RESTful
-- Utilize docker. Você pode usar o docker-compose.yml deste repositório para rodar sua solução, mas fique livre para usar outro ou personaliza-lo. Você também pode usar o Laravel Sail caso prefira.
+- Siga as boas práticas para o desenvolvimento de APIs RESTful
 
 ## Segue o passo a passo para executar o projeto
 
