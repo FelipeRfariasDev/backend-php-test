@@ -104,7 +104,6 @@ class ProductsController extends Controller
         $products->preco = $request->input("preco");
         $products->qty_disponivel = $request->input("qty_disponivel");
         $products->marca = $request->input("marca");
-        $products->save();
 
         try {
             if($products->save()){
