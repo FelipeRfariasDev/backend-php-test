@@ -3,11 +3,14 @@
 namespace Tests\Feature;
 
 use GuzzleHttp\Client;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\Thread;
 
 class ProductsControllerApiTest extends TestCase
 {
+
+    //Testes de feature no ponto do (usuário) que nesse caso é quem irá consumir os metodos da api
+
     /**
      * Add /api/products via post
      *

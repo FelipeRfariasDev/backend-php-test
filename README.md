@@ -63,7 +63,7 @@ https://go.postman.co/workspace/Team-Workspace~ae3c3730-a225-4945-879f-78225a00b
 
 https://github.com/FelipeRfariasDev/backend-php-test/blob/main/postman/app-test-api%20crud%20products%20pagination%20search.postman_collection.json
 
-
+##### Para executar os testes com php Unit
 vendor/bin/phpunit --testdox
 
 ![alt text](https://github.com/FelipeRfariasDev/backend-php-test/blob/main/phpunit_img/products.png?raw=true)
